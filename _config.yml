@@ -21,11 +21,11 @@
 title: Akhil Chuliyat Jose
 email: akhiljose1999@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Hello, and welcome to my blog. Here, I share insights, and experiences related to: Programming and Development, Computer Networks Protocols and Deep Learning.
+  Hello, and welcome to my personal blog. Here, I share insights, and experiences in programing, computer networks, and AI.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://akhilcjose.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  akhilcjose
 
 # Build settings
 #theme: jekyll-theme-clean-blog
