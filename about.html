@@ -3,13 +3,17 @@ layout: page
 title: About
 description: Hello, and welcome to my blog. Here, I share insights, and experiences related to Programming and Development, Computer Networks Protocols and Deep Learning.
 background: '/img/index-bg.jpg'
+photo: '/img/my-photo.png'
 ---
 
 <!-- Page Header -->
-<header class="masthead" style="background-image: url('{{ "/img/index-bg.jpg" | relative_url }}')"></header>
+<header class="masthead" style="background-image: url('{{ page.background | relative_url }}')"></header>
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
+            {% if page.photo %}
+                <img src="{{ page.photo | relative_url }}" alt="{{ page.title }}" class="header-profile rounded-circle">
+            {% endif %}
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="page-heading text-center">
                     <h1>My Resume</h1>
