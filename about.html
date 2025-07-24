@@ -9,11 +9,11 @@ photo: '/img/my-photo.png'
 <!-- Page Header -->
 <header class="masthead" style="background-image: url('{{ page.background | relative_url }}')"></header>
     <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            {% if page.photo %}
+    <div class="container text-center">
+        {% if page.photo %}
                 <img src="{{ page.photo | relative_url }}" alt="{{ page.title }}" class="header-profile rounded-circle">
-            {% endif %}
+        {% endif %}
+        <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="page-heading text-center">
                     <h1>My Resume</h1>
