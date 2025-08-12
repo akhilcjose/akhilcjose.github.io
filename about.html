@@ -6,16 +6,59 @@ background: '/img/index-bg.jpg'
 photo: '/img/my-photo.png'
 ---
 
-<!-- Page Header -->
-<header class="masthead" style="background-image: url('{{ page.background | relative_url }}')"></header>
+<style>
+    body {
+        background: linear-gradient(135deg, #d4f1f9, #ffffff);
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 15px;
+        padding: 20px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px 0 rgba(0, 191, 255, 0.37);
+        margin-bottom: 20px;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .glass-card:hover {
+        transform: scale(1.02);
+    }
+
+    h1, h2 {
+        color: #0077b6;
+    }
+
+    h4 {
+        color: #023e8a;
+    }
+
+    .subheading {
+        color: #48cae4;
+        font-weight: bold;
+    }
+
+    a {
+        color: #0077b6;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<header class="masthead" style="background-image: url('{{ page.background | relative_url }}'); background-size: cover;">
     <div class="overlay"></div>
     <div class="container text-center">
         {% if page.photo %}
-                <img src="{{ page.photo | relative_url }}" alt="{{ page.title }}" class="img-fluid rounded-circle mx-auto d-block w-25">
+            <img src="{{ page.photo | relative_url }}" alt="{{ page.title }}" class="img-fluid rounded-circle mx-auto d-block w-25">
         {% endif %}
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
-                <div class="page-heading text-center">
+                <div class="page-heading text-center glass-card">
                     <h1>My Resume</h1>
                     <span class="subheading">A summary of my background & experience</span>
                 </div>
@@ -28,79 +71,96 @@ photo: '/img/my-photo.png'
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
+
             <!-- About Me -->
-            <h2 class="mt-4">About Me</h2>
-            <p>Hello! I'm <strong>Akhil Chuliyat Jose</strong>, a <strong>Software Engineer & Master's Student in International Software Systems Science</strong> with expertise in <strong>Python, Java, Dart, JavaScript, PostgreSQL, Flutter, Django, React, Vue, FastAPI, Docker</strong>. Passionate about <strong>Software Development, Computer Vision, and Natural Language Processing</strong>.</p>
+            <div class="glass-card">
+                <h2>About Me</h2>
+                <p>Hello! I'm <strong>Akhil Chuliyat Jose</strong>, a <strong>Software Engineer & Master's Student in International Software Systems Science</strong> with expertise in <strong>Python, Java, Dart, JavaScript, PostgreSQL, Flutter, Django, React, Vue, FastAPI, Docker</strong>. Passionate about <strong>Software Development, Computer Vision, and Natural Language Processing</strong>.</p>
+            </div>
 
             <!-- Work Experience -->
-            <h2 class="mt-4">Work Experience</h2>
-
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h4 class="card-title">Student Assistant - Otto Friedrich Universität Bamberg</h4>
-                    <h6 class="card-subtitle text-muted">03/2025 – Present | Bamberg, Germany</h6>
-                    <p class="card-text mt-2">Working on developing a social media analytics tool using FastAPI, PostgreSQL, and data analytics techniques.</p>
+            <div class="glass-card">
+                <h2>Work Experience</h2>
+                <div>
+                    <h4>Student Assistant - Otto Friedrich Universität Bamberg</h4>
+                    <h6>03/2025 – Present | Bamberg, Germany</h6>
+                    <p>Developing a social media analytics tool using FastAPI, PostgreSQL, and data analytics.</p>
                 </div>
-            </div>
-
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h4 class="card-title">Software Engineer - Dexlock</h4>
-                    <h6 class="card-subtitle text-muted">08/2022 – 07/2023 | Kochi, India</h6>
-                    <p class="card-text mt-2">Worked as a Flutter developer for an AI-driven biography generation app, deployed to App Store and Play Store. Managed tasks via JIRA using Agile methodology. Conducted research on data virtualization services. Developed Vue.js components for an e-commerce platform. Worked with AWS EC2, S3, ECR, Azure Container Registry, Cognitive Services, and Docker Hub.</p>
+                <div>
+                    <h4>Software Engineer - Dexlock</h4>
+                    <h6>08/2022 – 07/2023 | Kochi, India</h6>
+                    <p>Worked on AI-driven biography generation app, managed projects in JIRA, researched data virtualization, developed Vue.js e-commerce features, and used AWS, Azure, and Docker.</p>
                 </div>
-            </div>
-
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h4 class="card-title">Web Developer Intern - Sysbreeze Technologies</h4>
-                    <h6 class="card-subtitle text-muted">2021 | Calicut, India</h6>
-                    <p class="card-text mt-2">Gained hands-on experience in HTML, CSS, and JavaScript web development.</p>
+                <div>
+                    <h4>Web Developer Intern - Sysbreeze Technologies</h4>
+                    <h6>2021 | Calicut, India</h6>
+                    <p>Hands-on experience in HTML, CSS, and JavaScript web development.</p>
                 </div>
             </div>
 
             <!-- Education -->
-            <h2 class="mt-4">Education</h2>
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h4 class="card-title">MSc in International Software Systems Science - Otto Friedrich Universität Bamberg</h4>
-                    <h6 class="card-subtitle text-muted">04/2024 – Present | Bamberg, Germany</h6>
-                </div>
+            <div class="glass-card">
+                <h2>Education</h2>
+                <p><strong>MSc</strong> in International Software Systems Science - Otto Friedrich Universität Bamberg (04/2024 – Present)</p>
+                <p><strong>B.Tech</strong> in Computer Science & Engineering - Muthoot Institute of Technology and Science (08/2018 – 07/2022) | CGPA: 7.69/10</p>
+                <p><strong>Higher Secondary</strong> - Bhavan's Vidya Mandir, Girinagar (06/2015 – 06/2017) | 83.4%</p>
             </div>
 
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h4 class="card-title">B.Tech in Computer Science and Engineering - Muthoot Institute of Technology and Science (KTU)</h4>
-                    <h6 class="card-subtitle text-muted">08/2018 – 07/2022 | Kochi, India</h6>
-                    <p class="card-text mt-2">CGPA: 7.69/10 (German Grade: 2.3)</p>
-                </div>
+            <!-- Projects -->
+            <div class="glass-card">
+                <h2>Projects</h2>
+                <p><strong>Bullcy</strong> - Cyberbullying Detection and Handling System (B.Tech Project): Used BERT with BiLSTM for harmful content detection on social media.</p>
+                <p><strong>Webster</strong> - Hackathon Project: Service app for private sellers in social media (BitFlip Hackathon).</p>
             </div>
 
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h4 class="card-title">Higher Secondary - Bhavan's Vidya Mandir, Girinagar</h4>
-                    <h6 class="card-subtitle text-muted">06/2015 – 06/2017 | Kochi, India</h6>
-                    <p class="card-text mt-2">Percentage: 83.4%</p>
-                </div>
+            <!-- Seminars & Workshops -->
+            <div class="glass-card">
+                <h2>Seminars & Workshops</h2>
+                <p><strong>Explainable machine learning with GdVAE</strong> - Self-explainable model with counterfactual explanations (Otto Friedrich Universität Bamberg, 10/2024 – 01/2025).</p>
+            </div>
+
+            <!-- Conferences / Publications -->
+            <div class="glass-card">
+                <h2>Conferences / Publications</h2>
+                <p><strong>Cyberbullying Detection and Handling: A Deep Learning Approach</strong> - GRENZE Scientific Society, Kerala, India.</p>
             </div>
 
             <!-- Skills -->
-            <h2 class="mt-4">Skills</h2>
-            <ul class="list-group mb-4">
-                <li class="list-group-item">Python, Java, Dart, JavaScript</li>
-                <li class="list-group-item">PostgreSQL, TensorFlow, NumPy</li>
-                <li class="list-group-item">Flutter, Django, React JS, Vue JS</li>
-                <li class="list-group-item">FastAPI, Docker, Git</li>
-                <li class="list-group-item">JIRA, Agile Methodologies</li>
-            </ul>
+            <div class="glass-card">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Python, Java, Dart, JavaScript</li>
+                    <li>PostgreSQL, TensorFlow, NumPy</li>
+                    <li>Flutter, Django, React, Vue</li>
+                    <li>FastAPI, Docker, Git</li>
+                    <li>JIRA, Agile Methodologies</li>
+                </ul>
+            </div>
+
+            <!-- Languages -->
+            <div class="glass-card">
+                <h2>Languages</h2>
+                <ul>
+                    <li>English (IELTS Band 8)</li>
+                    <li>Malayalam (Native)</li>
+                    <li>German (A2)</li>
+                </ul>
+            </div>
+
+            <!-- Interests -->
+            <div class="glass-card">
+                <h2>Interests</h2>
+                <p>Software Development, Computer Vision, AI, Natural Language Processing</p>
+            </div>
 
             <!-- Contact Information -->
-            <h2 class="mt-4">Contact</h2>
-            <ul class="list-unstyled">
-                <li><strong>Email:</strong> <a href="mailto:akhiljose1999@gmail.com">akhiljose1999@gmail.com</a></li>
-                <li><strong>Phone:</strong> +49 176 79039694</li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/akhil-c-jose-701014195" target="_blank">linkedin.com/in/akhil-c-jose-701014195</a></li>
-            </ul>
+            <div class="glass-card">
+                <h2>Contact</h2>
+                <p><strong>Email:</strong> <a href="mailto:akhiljose1999@gmail.com">akhiljose1999@gmail.com</a></p>
+                <p><strong>Phone:</strong> +49 176 79039694</p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/akhil-c-jose-701014195" target="_blank">linkedin.com/in/akhil-c-jose-701014195</a></p>
+            </div>
+
         </div>
     </div>
 </div>
